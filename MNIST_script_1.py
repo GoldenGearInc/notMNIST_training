@@ -90,7 +90,7 @@ with graph.as_default():
 
 with tf.Session(graph=graph) as sess:
     sess.run(tf.global_variables_initializer())
-    for step in range(2000):
+    for step in range(20000):
         batch = mnist.train.next_batch(50)
         if step % 100 == 0:
             train_accuracy = accuracy.eval(feed_dict={
